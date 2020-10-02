@@ -1,0 +1,142 @@
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\TPA-Desktop.exe.config
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA-Desktop.csprojResolveAssemblyReference.cache
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\MainWindow.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\App.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA-Desktop_Content.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA-Desktop_MarkupCompile.cache
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA-Desktop_MarkupCompile.lref
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\TPA-Desktop.exe
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\TPA-Desktop.pdb
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\EntityFramework.dll
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\EntityFramework.SqlServer.dll
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\EntityFramework.xml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\EntityFramework.SqlServer.xml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\MainWindow.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA-Desktop.g.resources
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA_Desktop.Properties.Resources.resources
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA-Desktop.csproj.GenerateResource.Cache
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA-Desktop.exe
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\TPA-Desktop.pdb
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\Dragablz.dll
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\MaterialDesignColors.dll
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\Dragablz.pdb
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\Dragablz.xml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\MaterialDesignColors.pdb
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\App.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\BaseView\LoginView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\CreativeDeptView\CreativeView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\CreativeDeptView\CreativeView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\BaseView\LoginView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\CreativeDeptView\UpdatePage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\CreativeDeptView\UpdatePage.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\ConstructionDeptView\ConstructionView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\ConstructionDeptView\ConstructionView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\SalesDeptView\SalesAndMarketView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\SalesDeptView\SalesAndMarketView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\SalesDeptView\UpdatePage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\SalesDeptView\UpdatePage.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\HRDView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\HRDView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\AddPage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\AddPage.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\UpdatePage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\UpdatePage.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\MaintenenceDeptView\MaintenenceView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\MaintenenceDeptView\MaintenenceView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\MaintenenceDeptView\UpdatePage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\MaintenenceDeptView\UpdatePage.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\PurchaseDeptView\PurchaseView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\PurchaseDeptView\PurchaseView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\FinanceDeptView\FinanceView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\FinanceDeptView\FinanceView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\FinanceDeptView\ManagePage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\FinanceDeptView\ManagePage.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\ManagerView\ManagerView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\ManagerView\ManagerView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\AddWorkPage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\AddWorkPage.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\UpdateWorkPage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HRDDeptView\UpdateWorkPage.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\AttractionDeptView\AttractionView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\AttractionDeptView\AttractionView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\bin\Debug\QRCoder.dll
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HotelDeptView\FrontOfficeView.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HotelDeptView\FrontOfficeView.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HotelDeptView\AddReservation.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HotelDeptView\AddReservation.baml
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HotelDeptView\FeedbackPage.g.cs
+D:\TPA Desktop\TPA-Desktop\TPA-Desktop\obj\Debug\View\HotelDeptView\FeedbackPage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\TPA-Desktop.exe.config
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA-Desktop.exe
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA-Desktop.pdb
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\TPA-Desktop.exe
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\TPA-Desktop.pdb
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\Dragablz.dll
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\EntityFramework.dll
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\EntityFramework.SqlServer.dll
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\MaterialDesignColors.dll
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\QRCoder.dll
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\Dragablz.pdb
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\Dragablz.xml
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\EntityFramework.xml
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\EntityFramework.SqlServer.xml
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\MaterialDesignColors.pdb
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\TPA-Desktop-Program\TPA-Desktop\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA-Desktop.csprojResolveAssemblyReference.cache
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\MainWindow.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\AttractionDeptView\AttractionView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\ConstructionDeptView\ConstructionView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\CreativeDeptView\CreativeView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\BaseView\LoginView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\CreativeDeptView\UpdatePage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\FinanceDeptView\FinanceView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\FinanceDeptView\ManagePage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HotelDeptView\AddReservation.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HotelDeptView\FeedbackPage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HotelDeptView\FrontOfficeView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\AddPage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\AddWorkPage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\HRDView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\UpdatePage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\UpdateWorkPage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\MaintenenceDeptView\MaintenenceView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\MaintenenceDeptView\UpdatePage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\ManagerView\ManagerView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\PurchaseDeptView\PurchaseView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\SalesDeptView\SalesAndMarketView.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\SalesDeptView\UpdatePage.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\App.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA-Desktop_Content.g.cs
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA-Desktop_MarkupCompile.cache
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA-Desktop_MarkupCompile.lref
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\App.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\MainWindow.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\AttractionDeptView\AttractionView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\ConstructionDeptView\ConstructionView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\CreativeDeptView\CreativeView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\BaseView\LoginView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\CreativeDeptView\UpdatePage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\FinanceDeptView\FinanceView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\FinanceDeptView\ManagePage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HotelDeptView\AddReservation.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HotelDeptView\FeedbackPage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HotelDeptView\FrontOfficeView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\AddPage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\AddWorkPage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\HRDView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\UpdatePage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\HRDDeptView\UpdateWorkPage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\MaintenenceDeptView\MaintenenceView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\MaintenenceDeptView\UpdatePage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\ManagerView\ManagerView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\PurchaseDeptView\PurchaseView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\SalesDeptView\SalesAndMarketView.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\View\SalesDeptView\UpdatePage.baml
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA-Desktop.g.resources
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA_Desktop.Properties.Resources.resources
+D:\TPA-Desktop-Program\TPA-Desktop\obj\Debug\TPA-Desktop.csproj.GenerateResource.Cache

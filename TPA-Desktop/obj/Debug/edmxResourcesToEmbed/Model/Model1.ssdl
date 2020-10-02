@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UnderTheSeaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Advertisement">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="255" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AttractionRide">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+    <Property Name="Type" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Construction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdeaID" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="Salary" Type="int" />
+    <Property Name="DepartmentID" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReservationId" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="Type" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FundRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="Information" Type="varchar" MaxLength="255" />
+    <Property Name="AmountMoney" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Note" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Idea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tittle" Type="varchar" MaxLength="255" />
+    <Property Name="Information" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Note" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Maintenence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AttractionRideID" Type="int" />
+    <Property Name="Information" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PersonalRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" />
+    <Property Name="Title" Type="varchar" MaxLength="255" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="Note" Type="varchar" MaxLength="255" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Type" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="PurchaseInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="Information" Type="varchar" MaxLength="255" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <EntityType Name="PurchaseRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="Information" Type="varchar" MaxLength="255" />
+    <Property Name="Note" Type="varchar" MaxLength="255" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="VisitorId" Type="int" />
+    <Property Name="RoomId" Type="int" />
+    <Property Name="CheckInDate" Type="varchar" MaxLength="255" />
+    <Property Name="CheckOutDate" Type="varchar" MaxLength="255" />
+    <Property Name="TotalPrice" Type="int" />
+    <Property Name="Night" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Room">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="255" />
+    <Property Name="Price" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Ticket">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Valid_Date" Type="date" />
+  </EntityType>
+  <EntityType Name="TicketTransaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="TotalPrice" Type="int" />
+  </EntityType>
+  <EntityType Name="Visitor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="phoneNumber" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="WorkPerformance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" />
+    <Property Name="PerformanceDetail" Type="varchar" MaxLength="255" />
+    <Property Name="Status" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__Construct__IdeaI__3A81B327">
+    <End Role="Idea" Type="Self.Idea" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Construction" Type="Self.Construction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Idea">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Construction">
+        <PropertyRef Name="IdeaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Employee__Depart__2C3393D0">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="DepartmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Feedback__Reserv__0D7A0286">
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Feedback" Type="Self.Feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reservation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Feedback">
+        <PropertyRef Name="ReservationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FundReque__Depar__5DCAEF64">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FundRequest" Type="Self.FundRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FundRequest">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Maintenen__Attra__4222D4EF">
+    <End Role="AttractionRide" Type="Self.AttractionRide" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Maintenence" Type="Self.Maintenence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AttractionRide">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Maintenence">
+        <PropertyRef Name="AttractionRideID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PersonalR__Emplo__60A75C0F">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PersonalRequest" Type="Self.PersonalRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonalRequest">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PurchaseI__Emplo__72C60C4A">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PurchaseInformation" Type="Self.PurchaseInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseInformation">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PurchaseR__Depar__5535A963">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PurchaseRequest" Type="Self.PurchaseRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PurchaseRequest">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reservati__Emplo__06CD04F7">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reservati__RoomI__08B54D69">
+    <End Role="Room" Type="Self.Room" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Room">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="RoomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Reservati__Visit__07C12930">
+    <End Role="Visitor" Type="Self.Visitor" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Visitor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="VisitorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TicketTra__Emplo__778AC167">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TicketTransaction" Type="Self.TicketTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TicketTransaction">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WorkPerfo__Emplo__6FE99F9F">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkPerformance" Type="Self.WorkPerformance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="WorkPerformance">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UnderTheSeaModelStoreContainer">
+    <EntitySet Name="Advertisement" EntityType="Self.Advertisement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AttractionRide" EntityType="Self.AttractionRide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Construction" EntityType="Self.Construction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FundRequest" EntityType="Self.FundRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Idea" EntityType="Self.Idea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Maintenence" EntityType="Self.Maintenence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonalRequest" EntityType="Self.PersonalRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseInformation" EntityType="Self.PurchaseInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseRequest" EntityType="Self.PurchaseRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TicketTransaction" EntityType="Self.TicketTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Visitor" EntityType="Self.Visitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkPerformance" EntityType="Self.WorkPerformance" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Construct__IdeaI__3A81B327" Association="Self.FK__Construct__IdeaI__3A81B327">
+      <End Role="Idea" EntitySet="Idea" />
+      <End Role="Construction" EntitySet="Construction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Employee__Depart__2C3393D0" Association="Self.FK__Employee__Depart__2C3393D0">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Feedback__Reserv__0D7A0286" Association="Self.FK__Feedback__Reserv__0D7A0286">
+      <End Role="Reservation" EntitySet="Reservation" />
+      <End Role="Feedback" EntitySet="Feedback" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FundReque__Depar__5DCAEF64" Association="Self.FK__FundReque__Depar__5DCAEF64">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="FundRequest" EntitySet="FundRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Maintenen__Attra__4222D4EF" Association="Self.FK__Maintenen__Attra__4222D4EF">
+      <End Role="AttractionRide" EntitySet="AttractionRide" />
+      <End Role="Maintenence" EntitySet="Maintenence" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PersonalR__Emplo__60A75C0F" Association="Self.FK__PersonalR__Emplo__60A75C0F">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="PersonalRequest" EntitySet="PersonalRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PurchaseI__Emplo__72C60C4A" Association="Self.FK__PurchaseI__Emplo__72C60C4A">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="PurchaseInformation" EntitySet="PurchaseInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PurchaseR__Depar__5535A963" Association="Self.FK__PurchaseR__Depar__5535A963">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="PurchaseRequest" EntitySet="PurchaseRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reservati__Emplo__06CD04F7" Association="Self.FK__Reservati__Emplo__06CD04F7">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reservati__RoomI__08B54D69" Association="Self.FK__Reservati__RoomI__08B54D69">
+      <End Role="Room" EntitySet="Room" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Reservati__Visit__07C12930" Association="Self.FK__Reservati__Visit__07C12930">
+      <End Role="Visitor" EntitySet="Visitor" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TicketTra__Emplo__778AC167" Association="Self.FK__TicketTra__Emplo__778AC167">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="TicketTransaction" EntitySet="TicketTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WorkPerfo__Emplo__6FE99F9F" Association="Self.FK__WorkPerfo__Emplo__6FE99F9F">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="WorkPerformance" EntitySet="WorkPerformance" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

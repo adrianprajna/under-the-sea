@@ -1,0 +1,212 @@
+﻿<Window x:Class="TPA_Desktop.View.ManagerView.ManagerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPA_Desktop.View.ManagerView"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Height="600" Width="1020" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid Height="120" VerticalAlignment="Top" Background="Navy">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Name="txtName" Text="Under The Sea" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" FontFamily="Champagne &amp; Limousines" Padding="10px"/>
+            <Button Name="btnLogout" Click="btnLogout_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+                Logout
+            </Button>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Manager" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines"/>
+            </StackPanel>
+
+        </Grid>
+        <Grid Margin="0 100 0 0">
+            <dragablz:TabablzControl>
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController/>
+                </dragablz:TabablzControl.InterTabController>
+                <TabItem Header="Home">
+                    <StackPanel>
+                        <TextBlock Text="Employee List" FontSize="20" Padding="10"/>
+
+                        <DataGrid Name="viewEmployee" AutoGenerateColumns="False" IsReadOnly="True" Height="350" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
+                                <DataGridTextColumn Header="Email" Binding="{Binding Path=Email}"/>
+                                <DataGridTextColumn Header="DOB" Binding="{Binding Path=DOB}"/>
+                                <DataGridTextColumn Header="Salary" Binding="{Binding Path=Salary}"/>
+                                <DataGridTextColumn Header="Department Name" Binding="{Binding Path=DeptName}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="Manage Resignation Request">
+                    <StackPanel>
+                        <TextBlock Text="Resignation Request List" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewResign" AutoGenerateColumns="False" IsReadOnly="True" Height="310" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Employee Id" Binding="{Binding Path=EmployeeId}"/>
+                                <DataGridTextColumn Header="Employee Name" Binding="{Binding Path=EmployeeName}"/>
+                                <DataGridTextColumn Header="Title" Binding="{Binding Path=Title}"/>
+                                <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="Action"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.HeaderTemplate>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Name="btnAccRes" Click="btnAccRes_Click" Content="Accept" Margin="0 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                                <Button Name="btnRejRes" Click="btnRejRes_Click" Content="Reject" Margin="10 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <TextBlock Text="Note" FontSize="20" Padding="10" FontWeight="Bold"/>
+                        <TextBox Margin="5" Name="txtNote" BorderBrush="White"></TextBox>
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="Manage Raise Salary Request">
+                    <StackPanel>
+                        <TextBlock Text="Raise Salary Request List" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewRaise" AutoGenerateColumns="False" IsReadOnly="True" Height="310" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Title" Binding="{Binding Path=Title}"/>
+                                <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="Action"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.HeaderTemplate>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Name="btnAccRaise" Click="btnAccRaise_Click" Content="Accept" Margin="0 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                                <Button Name="btnRejRaise" Click="btnRejRaise_Click" Content="Reject" Margin="10 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <TextBlock Text="Note" FontSize="20" Padding="10" FontWeight="Bold"/>
+                        <TextBox Margin="5" Name="txtNoteRaise" BorderBrush="White"></TextBox>
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="Manage Firing Request">
+                    <StackPanel>
+                        <TextBlock Text="Fire Employee Request List" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewFire" AutoGenerateColumns="False" IsReadOnly="True" Height="310" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Title" Binding="{Binding Path=Title}"/>
+                                <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="Action"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.HeaderTemplate>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Name="btnAccFire" Click="btnAccFire_Click" Content="Accept" Margin="0 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                                <Button Name="btnRejFire" Click="btnRejFire_Click" Content="Reject" Margin="10 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <TextBlock Text="Note" FontSize="20" Padding="10" FontWeight="Bold"/>
+                        <TextBox Margin="5" Name="txtNoteFire" BorderBrush="White"></TextBox>
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="Manage Ideas">
+                    <StackPanel>
+                        <TextBlock Text="Ideas List" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewIdeas" AutoGenerateColumns="False" IsReadOnly="True" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Title" Binding="{Binding Path=Tittle}"/>
+                                <DataGridTextColumn Header="Information" Binding="{Binding Path=Information}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="Action"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.HeaderTemplate>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                            <Button Name="btnAccIdea" Click="btnAccIdea_Click" Content="Accept" Margin="0 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                            <Button Name="btnRejIdea" Click="btnRejIdea_Click" Content="Reject" Margin="10 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <TextBlock Text="Note" FontSize="20" Padding="10" FontWeight="Bold"/>
+                        <TextBox Margin="5" Name="txtNoteIdea" BorderBrush="White"></TextBox>
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="View Work Performance">
+                    <StackPanel>
+                        <TextBlock Text="Employee Work Performance" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewWork" AutoGenerateColumns="False" IsReadOnly="True" Height="300" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Employee Id" Binding="{Binding Path=EmployeeId}"/>
+                                <DataGridTextColumn Header="Employee Name" Binding="{Binding Path=EmployeeName}"/>
+                                <DataGridTextColumn Header="Performance Detail" Binding="{Binding Path=PerformanceDetail}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem>
+
+            </dragablz:TabablzControl>
+        </Grid>
+    </Grid>
+</Window>

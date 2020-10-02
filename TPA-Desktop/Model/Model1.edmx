@@ -1,0 +1,1139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="UnderTheSeaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Advertisement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="255" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="AttractionRide">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+          <Property Name="Type" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Construction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdeaID" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="Salary" Type="int" />
+          <Property Name="DepartmentID" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReservationId" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="Type" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="FundRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="Information" Type="varchar" MaxLength="255" />
+          <Property Name="AmountMoney" Type="int" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Note" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Idea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tittle" Type="varchar" MaxLength="255" />
+          <Property Name="Information" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Note" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Maintenence">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AttractionRideID" Type="int" />
+          <Property Name="Information" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PersonalRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="Title" Type="varchar" MaxLength="255" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="Note" Type="varchar" MaxLength="255" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Type" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PurchaseInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" />
+          <Property Name="Information" Type="varchar" MaxLength="255" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
+        <EntityType Name="PurchaseRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="Information" Type="varchar" MaxLength="255" />
+          <Property Name="Note" Type="varchar" MaxLength="255" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Reservation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" />
+          <Property Name="VisitorId" Type="int" />
+          <Property Name="RoomId" Type="int" />
+          <Property Name="CheckInDate" Type="varchar" MaxLength="255" />
+          <Property Name="CheckOutDate" Type="varchar" MaxLength="255" />
+          <Property Name="TotalPrice" Type="int" />
+          <Property Name="Night" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Valid_Date" Type="date" />
+        </EntityType>
+        <EntityType Name="TicketTransaction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="TotalPrice" Type="int" />
+        </EntityType>
+        <EntityType Name="Visitor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="phoneNumber" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="WorkPerformance">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmployeeId" Type="int" />
+          <Property Name="PerformanceDetail" Type="varchar" MaxLength="255" />
+          <Property Name="Status" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK__Construct__IdeaI__3A81B327">
+          <End Role="Idea" Type="Self.Idea" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Construction" Type="Self.Construction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Idea">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Construction">
+              <PropertyRef Name="IdeaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Employee__Depart__2C3393D0">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DepartmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Feedback__Reserv__0D7A0286">
+          <End Role="Reservation" Type="Self.Reservation" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Feedback" Type="Self.Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Feedback">
+              <PropertyRef Name="ReservationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FundReque__Depar__5DCAEF64">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FundRequest" Type="Self.FundRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FundRequest">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Maintenen__Attra__4222D4EF">
+          <End Role="AttractionRide" Type="Self.AttractionRide" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Maintenence" Type="Self.Maintenence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AttractionRide">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Maintenence">
+              <PropertyRef Name="AttractionRideID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonalR__Emplo__60A75C0F">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PersonalRequest" Type="Self.PersonalRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonalRequest">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PurchaseI__Emplo__72C60C4A">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PurchaseInformation" Type="Self.PurchaseInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInformation">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PurchaseR__Depar__5535A963">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PurchaseRequest" Type="Self.PurchaseRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseRequest">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservati__Emplo__06CD04F7">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservati__RoomI__08B54D69">
+          <End Role="Room" Type="Self.Room" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="RoomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservati__Visit__07C12930">
+          <End Role="Visitor" Type="Self.Visitor" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visitor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="VisitorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TicketTra__Emplo__778AC167">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TicketTransaction" Type="Self.TicketTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TicketTransaction">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__WorkPerfo__Emplo__6FE99F9F">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="WorkPerformance" Type="Self.WorkPerformance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkPerformance">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="UnderTheSeaModelStoreContainer">
+          <EntitySet Name="Advertisement" EntityType="Self.Advertisement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AttractionRide" EntityType="Self.AttractionRide" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Construction" EntityType="Self.Construction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FundRequest" EntityType="Self.FundRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Idea" EntityType="Self.Idea" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Maintenence" EntityType="Self.Maintenence" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonalRequest" EntityType="Self.PersonalRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseInformation" EntityType="Self.PurchaseInformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PurchaseRequest" EntityType="Self.PurchaseRequest" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TicketTransaction" EntityType="Self.TicketTransaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Visitor" EntityType="Self.Visitor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkPerformance" EntityType="Self.WorkPerformance" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Construct__IdeaI__3A81B327" Association="Self.FK__Construct__IdeaI__3A81B327">
+            <End Role="Idea" EntitySet="Idea" />
+            <End Role="Construction" EntitySet="Construction" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Employee__Depart__2C3393D0" Association="Self.FK__Employee__Depart__2C3393D0">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Feedback__Reserv__0D7A0286" Association="Self.FK__Feedback__Reserv__0D7A0286">
+            <End Role="Reservation" EntitySet="Reservation" />
+            <End Role="Feedback" EntitySet="Feedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FundReque__Depar__5DCAEF64" Association="Self.FK__FundReque__Depar__5DCAEF64">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="FundRequest" EntitySet="FundRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Maintenen__Attra__4222D4EF" Association="Self.FK__Maintenen__Attra__4222D4EF">
+            <End Role="AttractionRide" EntitySet="AttractionRide" />
+            <End Role="Maintenence" EntitySet="Maintenence" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonalR__Emplo__60A75C0F" Association="Self.FK__PersonalR__Emplo__60A75C0F">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="PersonalRequest" EntitySet="PersonalRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseI__Emplo__72C60C4A" Association="Self.FK__PurchaseI__Emplo__72C60C4A">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="PurchaseInformation" EntitySet="PurchaseInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PurchaseR__Depar__5535A963" Association="Self.FK__PurchaseR__Depar__5535A963">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="PurchaseRequest" EntitySet="PurchaseRequest" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservati__Emplo__06CD04F7" Association="Self.FK__Reservati__Emplo__06CD04F7">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Reservation" EntitySet="Reservation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservati__RoomI__08B54D69" Association="Self.FK__Reservati__RoomI__08B54D69">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="Reservation" EntitySet="Reservation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservati__Visit__07C12930" Association="Self.FK__Reservati__Visit__07C12930">
+            <End Role="Visitor" EntitySet="Visitor" />
+            <End Role="Reservation" EntitySet="Reservation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TicketTra__Emplo__778AC167" Association="Self.FK__TicketTra__Emplo__778AC167">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="TicketTransaction" EntitySet="TicketTransaction" />
+          </AssociationSet>
+          <AssociationSet Name="FK__WorkPerfo__Emplo__6FE99F9F" Association="Self.FK__WorkPerfo__Emplo__6FE99F9F">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="WorkPerformance" EntitySet="WorkPerformance" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UnderTheSeaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__Depart__2C3393D0" FromRole="Department" ToRole="Employee" />
+          <NavigationProperty Name="PurchaseRequests" Relationship="UnderTheSeaModel.FK__PurchaseR__Depar__4F7CD00D" FromRole="Department" ToRole="PurchaseRequest" />
+          <NavigationProperty Name="FundRequests" Relationship="UnderTheSeaModel.FK__FundReque__Depar__5DCAEF64" FromRole="Department" ToRole="FundRequest" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Salary" Type="Int32" />
+          <Property Name="DepartmentID" Type="Int32" />
+          <NavigationProperty Name="Department" Relationship="Self.FK__Employee__Depart__2C3393D0" FromRole="Employee" ToRole="Department" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PersonalRequests" Relationship="UnderTheSeaModel.FK__PersonalR__Emplo__60A75C0F" FromRole="Employee" ToRole="PersonalRequest" />
+          <NavigationProperty Name="WorkPerformances" Relationship="UnderTheSeaModel.FK__WorkPerfo__Emplo__6FE99F9F" FromRole="Employee" ToRole="WorkPerformance" />
+          <NavigationProperty Name="PurchaseInformations" Relationship="UnderTheSeaModel.FK__PurchaseI__Emplo__72C60C4A" FromRole="Employee" ToRole="PurchaseInformation" />
+          <NavigationProperty Name="TicketTransactions" Relationship="UnderTheSeaModel.FK__TicketTra__Emplo__778AC167" FromRole="Employee" ToRole="TicketTransaction" />
+          <NavigationProperty Name="Reservations" Relationship="UnderTheSeaModel.FK__Reservati__Emplo__06CD04F7" FromRole="Employee" ToRole="Reservation" />
+        </EntityType>
+        <Association Name="FK__Employee__Depart__2C3393D0">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="DepartmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Departments" EntityType="Self.Department" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <AssociationSet Name="FK__Employee__Depart__2C3393D0" Association="Self.FK__Employee__Depart__2C3393D0">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <EntitySet Name="Ideas" EntityType="UnderTheSeaModel.Idea" />
+          <EntitySet Name="AttractionRides" EntityType="UnderTheSeaModel.AttractionRide" />
+          <EntitySet Name="Constructions" EntityType="UnderTheSeaModel.Construction" />
+          <AssociationSet Name="FK__Construct__IdeaI__3A81B327" Association="UnderTheSeaModel.FK__Construct__IdeaI__3A81B327">
+            <End Role="Idea" EntitySet="Ideas" />
+            <End Role="Construction" EntitySet="Constructions" />
+          </AssociationSet>
+          <EntitySet Name="Advertisements" EntityType="UnderTheSeaModel.Advertisement" />
+          <EntitySet Name="Maintenences" EntityType="UnderTheSeaModel.Maintenence" />
+          <AssociationSet Name="FK__Maintenen__Attra__4222D4EF" Association="UnderTheSeaModel.FK__Maintenen__Attra__4222D4EF">
+            <End Role="AttractionRide" EntitySet="AttractionRides" />
+            <End Role="Maintenence" EntitySet="Maintenences" />
+          </AssociationSet>
+          <EntitySet Name="PurchaseRequests" EntityType="UnderTheSeaModel.PurchaseRequest" />
+          <AssociationSet Name="FK__PurchaseR__Depar__4F7CD00D" Association="UnderTheSeaModel.FK__PurchaseR__Depar__4F7CD00D">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="PurchaseRequest" EntitySet="PurchaseRequests" />
+          </AssociationSet>
+          <EntitySet Name="FundRequests" EntityType="UnderTheSeaModel.FundRequest" />
+          <AssociationSet Name="FK__FundReque__Depar__5DCAEF64" Association="UnderTheSeaModel.FK__FundReque__Depar__5DCAEF64">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="FundRequest" EntitySet="FundRequests" />
+          </AssociationSet>
+          <EntitySet Name="PersonalRequests" EntityType="UnderTheSeaModel.PersonalRequest" />
+          <AssociationSet Name="FK__PersonalR__Emplo__60A75C0F" Association="UnderTheSeaModel.FK__PersonalR__Emplo__60A75C0F">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="PersonalRequest" EntitySet="PersonalRequests" />
+          </AssociationSet>
+          <EntitySet Name="WorkPerformances" EntityType="UnderTheSeaModel.WorkPerformance" />
+          <AssociationSet Name="FK__WorkPerfo__Emplo__6FE99F9F" Association="UnderTheSeaModel.FK__WorkPerfo__Emplo__6FE99F9F">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="WorkPerformance" EntitySet="WorkPerformances" />
+          </AssociationSet>
+          <EntitySet Name="PurchaseInformations" EntityType="UnderTheSeaModel.PurchaseInformation" />
+          <AssociationSet Name="FK__PurchaseI__Emplo__72C60C4A" Association="UnderTheSeaModel.FK__PurchaseI__Emplo__72C60C4A">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="PurchaseInformation" EntitySet="PurchaseInformations" />
+          </AssociationSet>
+          <EntitySet Name="TicketTransactions" EntityType="UnderTheSeaModel.TicketTransaction" />
+          <AssociationSet Name="FK__TicketTra__Emplo__778AC167" Association="UnderTheSeaModel.FK__TicketTra__Emplo__778AC167">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="TicketTransaction" EntitySet="TicketTransactions" />
+          </AssociationSet>
+          <EntitySet Name="Tickets" EntityType="UnderTheSeaModel.Ticket" />
+          <EntitySet Name="Rooms" EntityType="UnderTheSeaModel.Room" />
+          <EntitySet Name="Visitors" EntityType="UnderTheSeaModel.Visitor" />
+          <EntitySet Name="Reservations" EntityType="UnderTheSeaModel.Reservation" />
+          <AssociationSet Name="FK__Reservati__Emplo__06CD04F7" Association="UnderTheSeaModel.FK__Reservati__Emplo__06CD04F7">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Reservation" EntitySet="Reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservati__RoomI__08B54D69" Association="UnderTheSeaModel.FK__Reservati__RoomI__08B54D69">
+            <End Role="Room" EntitySet="Rooms" />
+            <End Role="Reservation" EntitySet="Reservations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reservati__Visit__07C12930" Association="UnderTheSeaModel.FK__Reservati__Visit__07C12930">
+            <End Role="Visitor" EntitySet="Visitors" />
+            <End Role="Reservation" EntitySet="Reservations" />
+          </AssociationSet>
+          <EntitySet Name="Feedbacks" EntityType="UnderTheSeaModel.Feedback" />
+          <AssociationSet Name="FK__Feedback__Reserv__0D7A0286" Association="UnderTheSeaModel.FK__Feedback__Reserv__0D7A0286">
+            <End Role="Reservation" EntitySet="Reservations" />
+            <End Role="Feedback" EntitySet="Feedbacks" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Idea">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tittle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Information" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Constructions" Relationship="UnderTheSeaModel.FK__Construct__IdeaI__3A81B327" FromRole="Idea" ToRole="Construction" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AttractionRide">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Maintenences" Relationship="UnderTheSeaModel.FK__Maintenen__Attra__4222D4EF" FromRole="AttractionRide" ToRole="Maintenence" />
+        </EntityType>
+        <EntityType Name="Construction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdeaID" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Idea" Relationship="UnderTheSeaModel.FK__Construct__IdeaI__3A81B327" FromRole="Construction" ToRole="Idea" />
+        </EntityType>
+        <Association Name="FK__Construct__IdeaI__3A81B327">
+          <End Type="UnderTheSeaModel.Idea" Role="Idea" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.Construction" Role="Construction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Idea">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Construction">
+              <PropertyRef Name="IdeaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Advertisement">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Maintenence">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AttractionRideID" Type="Int32" />
+          <Property Name="Information" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AttractionRide" Relationship="UnderTheSeaModel.FK__Maintenen__Attra__4222D4EF" FromRole="Maintenence" ToRole="AttractionRide" />
+        </EntityType>
+        <Association Name="FK__Maintenen__Attra__4222D4EF">
+          <End Type="UnderTheSeaModel.AttractionRide" Role="AttractionRide" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.Maintenence" Role="Maintenence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AttractionRide">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Maintenence">
+              <PropertyRef Name="AttractionRideID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PurchaseRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <Property Name="Information" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Department" Relationship="UnderTheSeaModel.FK__PurchaseR__Depar__4F7CD00D" FromRole="PurchaseRequest" ToRole="Department" />
+          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__PurchaseR__Depar__4F7CD00D">
+          <End Type="UnderTheSeaModel.Department" Role="Department" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.PurchaseRequest" Role="PurchaseRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseRequest">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="FundRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <Property Name="Information" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="AmountMoney" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Department" Relationship="UnderTheSeaModel.FK__FundReque__Depar__5DCAEF64" FromRole="FundRequest" ToRole="Department" />
+        </EntityType>
+        <Association Name="FK__FundReque__Depar__5DCAEF64">
+          <End Type="UnderTheSeaModel.Department" Role="Department" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.FundRequest" Role="FundRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FundRequest">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PersonalRequest">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employee" Relationship="UnderTheSeaModel.FK__PersonalR__Emplo__60A75C0F" FromRole="PersonalRequest" ToRole="Employee" />
+        </EntityType>
+        <Association Name="FK__PersonalR__Emplo__60A75C0F">
+          <End Type="UnderTheSeaModel.Employee" Role="Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.PersonalRequest" Role="PersonalRequest" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonalRequest">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="WorkPerformance">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeId" Type="Int32" />
+          <Property Name="PerformanceDetail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employee" Relationship="UnderTheSeaModel.FK__WorkPerfo__Emplo__6FE99F9F" FromRole="WorkPerformance" ToRole="Employee" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__WorkPerfo__Emplo__6FE99F9F">
+          <End Type="UnderTheSeaModel.Employee" Role="Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.WorkPerformance" Role="WorkPerformance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WorkPerformance">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PurchaseInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeId" Type="Int32" />
+          <Property Name="Information" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Employee" Relationship="UnderTheSeaModel.FK__PurchaseI__Emplo__72C60C4A" FromRole="PurchaseInformation" ToRole="Employee" />
+        </EntityType>
+        <Association Name="FK__PurchaseI__Emplo__72C60C4A">
+          <End Type="UnderTheSeaModel.Employee" Role="Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.PurchaseInformation" Role="PurchaseInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PurchaseInformation">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TicketTransaction">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeId" Type="Int32" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="TotalPrice" Type="Int32" />
+          <NavigationProperty Name="Employee" Relationship="UnderTheSeaModel.FK__TicketTra__Emplo__778AC167" FromRole="TicketTransaction" ToRole="Employee" />
+        </EntityType>
+        <Association Name="FK__TicketTra__Emplo__778AC167">
+          <End Type="UnderTheSeaModel.Employee" Role="Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.TicketTransaction" Role="TicketTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TicketTransaction">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Valid_Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Reservations" Relationship="UnderTheSeaModel.FK__Reservati__RoomI__08B54D69" FromRole="Room" ToRole="Reservation" />
+        </EntityType>
+        <EntityType Name="Visitor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="phoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Reservations" Relationship="UnderTheSeaModel.FK__Reservati__Visit__07C12930" FromRole="Visitor" ToRole="Reservation" />
+        </EntityType>
+        <EntityType Name="Reservation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeId" Type="Int32" />
+          <Property Name="VisitorId" Type="Int32" />
+          <Property Name="RoomId" Type="Int32" />
+          <Property Name="CheckInDate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CheckOutDate" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TotalPrice" Type="Int32" />
+          <Property Name="Night" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employee" Relationship="UnderTheSeaModel.FK__Reservati__Emplo__06CD04F7" FromRole="Reservation" ToRole="Employee" />
+          <NavigationProperty Name="Room" Relationship="UnderTheSeaModel.FK__Reservati__RoomI__08B54D69" FromRole="Reservation" ToRole="Room" />
+          <NavigationProperty Name="Visitor" Relationship="UnderTheSeaModel.FK__Reservati__Visit__07C12930" FromRole="Reservation" ToRole="Visitor" />
+          <NavigationProperty Name="Feedbacks" Relationship="UnderTheSeaModel.FK__Feedback__Reserv__0D7A0286" FromRole="Reservation" ToRole="Feedback" />
+        </EntityType>
+        <Association Name="FK__Reservati__Emplo__06CD04F7">
+          <End Type="UnderTheSeaModel.Employee" Role="Employee" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.Reservation" Role="Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservati__RoomI__08B54D69">
+          <End Type="UnderTheSeaModel.Room" Role="Room" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.Reservation" Role="Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="RoomId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reservati__Visit__07C12930">
+          <End Type="UnderTheSeaModel.Visitor" Role="Visitor" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.Reservation" Role="Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Visitor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="VisitorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReservationId" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Reservation" Relationship="UnderTheSeaModel.FK__Feedback__Reserv__0D7A0286" FromRole="Feedback" ToRole="Reservation" />
+        </EntityType>
+        <Association Name="FK__Feedback__Reserv__0D7A0286">
+          <End Type="UnderTheSeaModel.Reservation" Role="Reservation" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="UnderTheSeaModel.Feedback" Role="Feedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reservation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Feedback">
+              <PropertyRef Name="ReservationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UnderTheSeaModelStoreContainer" CdmEntityContainer="DatabaseEntities">
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ideas">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Idea">
+              <MappingFragment StoreEntitySet="Idea">
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Information" ColumnName="Information" />
+                <ScalarProperty Name="Tittle" ColumnName="Tittle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AttractionRides">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.AttractionRide">
+              <MappingFragment StoreEntitySet="AttractionRide">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Constructions">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Construction">
+              <MappingFragment StoreEntitySet="Construction">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="IdeaID" ColumnName="IdeaID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Advertisements">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Advertisement">
+              <MappingFragment StoreEntitySet="Advertisement">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Maintenences">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Maintenence">
+              <MappingFragment StoreEntitySet="Maintenence">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Information" ColumnName="Information" />
+                <ScalarProperty Name="AttractionRideID" ColumnName="AttractionRideID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseRequests">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.PurchaseRequest">
+              <MappingFragment StoreEntitySet="PurchaseRequest">
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Information" ColumnName="Information" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FundRequests">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.FundRequest">
+              <MappingFragment StoreEntitySet="FundRequest">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="AmountMoney" ColumnName="AmountMoney" />
+                <ScalarProperty Name="Information" ColumnName="Information" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonalRequests">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.PersonalRequest">
+              <MappingFragment StoreEntitySet="PersonalRequest">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkPerformances">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.WorkPerformance">
+              <MappingFragment StoreEntitySet="WorkPerformance">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PerformanceDetail" ColumnName="PerformanceDetail" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurchaseInformations">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.PurchaseInformation">
+              <MappingFragment StoreEntitySet="PurchaseInformation">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Information" ColumnName="Information" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TicketTransactions">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.TicketTransaction">
+              <MappingFragment StoreEntitySet="TicketTransaction">
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tickets">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Ticket">
+              <MappingFragment StoreEntitySet="Ticket">
+                <ScalarProperty Name="Valid_Date" ColumnName="Valid_Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rooms">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Room">
+              <MappingFragment StoreEntitySet="Room">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Visitors">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Visitor">
+              <MappingFragment StoreEntitySet="Visitor">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reservations">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Reservation">
+              <MappingFragment StoreEntitySet="Reservation">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Night" ColumnName="Night" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="CheckOutDate" ColumnName="CheckOutDate" />
+                <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+                <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+                <ScalarProperty Name="VisitorId" ColumnName="VisitorId" />
+                <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Feedbacks">
+            <EntityTypeMapping TypeName="UnderTheSeaModel.Feedback">
+              <MappingFragment StoreEntitySet="Feedback">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

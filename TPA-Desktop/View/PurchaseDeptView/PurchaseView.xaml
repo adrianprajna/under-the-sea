@@ -1,0 +1,161 @@
+﻿<Window x:Class="TPA_Desktop.View.PurchaseDeptView.PurchaseView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPA_Desktop.View.PurchaseDeptView"
+        mc:Ignorable="d"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Height="600" Width="875" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid Height="120" VerticalAlignment="Top" Background="Navy">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Name="txtName" Text="Under The Sea" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" FontFamily="Champagne &amp; Limousines" Padding="10px"/>
+            <Button Name="btnLogout" Click="btnLogout_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+                Logout
+            </Button>
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Purchase Department" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Champagne &amp; Limousines"/>
+            </StackPanel>
+
+        </Grid>
+        <Grid Margin="0 100 0 0">
+            <dragablz:TabablzControl>
+                <dragablz:TabablzControl.InterTabController>
+                    <dragablz:InterTabController/>
+                </dragablz:TabablzControl.InterTabController>
+                <TabItem Header="Home">
+                    <StackPanel>
+                        <TextBlock Text="Request Purchase" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewPurchaseRequest" AutoGenerateColumns="False" IsReadOnly="True" Height="310" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Department Name" Binding="{Binding Path=DepartmentName}"/>
+                                <DataGridTextColumn Header="Information" Binding="{Binding Path=Information}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="Action"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.HeaderTemplate>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Name="btnSend" Click="btnSend_Click" Content="Request to Fund" Margin="0 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <TextBlock Text="Predicted Amount of Money" FontSize="20" Padding="10" FontWeight="Bold"/>
+                        <TextBox Margin="5" Name="txtMoney" BorderBrush="White"></TextBox>
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="Fund Request Notification">
+                    <StackPanel>
+                        <TextBlock Text="Fund Request" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewFundRequest" AutoGenerateColumns="False" IsReadOnly="True" Height="310" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Information" Binding="{Binding Path=Information}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                                <DataGridTextColumn Header="Note" Binding="{Binding Path=Note}"/>
+                                <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}"/>
+                                <DataGridTemplateColumn>
+                                    <DataGridTemplateColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="Action"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.HeaderTemplate>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Name="btnNotify" Click="btnNotify_Click" Content="Notify" Margin="0 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <TextBlock Text="Note" FontSize="20" Padding="10" FontWeight="Bold"/>
+                        <TextBox Name="txtNote" Margin="10" BorderBrush="White"></TextBox>
+                    </StackPanel>
+                </TabItem>
+                
+                <TabItem Header="Manage Purchase Information">
+                    <StackPanel>
+                        <TextBlock Text="Purchase Information" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewPurchaseInformation" AutoGenerateColumns="False" IsReadOnly="True" Height="290" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Employee Id" Binding="{Binding Path=EmployeeId}"/>
+                                <DataGridTextColumn Header="Employee Name" Binding="{Binding Path=EmployeeName}"/>
+                                <DataGridTextColumn Header="Information" Binding="{Binding Path=Information}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <TextBlock Text="Information" FontSize="20" Padding="10" FontWeight="Bold"/>
+                        <TextBox Name="txtPurchase" Margin="10" BorderBrush="White"></TextBox>
+                        <Button Name="btnSubmit" Click="btnSubmit_Click" Content="Submit" Margin="0 0 0 10"/>
+                       </StackPanel>
+                </TabItem>
+
+                <TabItem Header="Manage Personal Request">
+
+                    <StackPanel>
+                        <TextBlock Text="Request for Personal" FontSize="20" Padding="10" HorizontalAlignment="Center" FontWeight="Bold"/>
+                        <Label Margin="10 0" FontSize="16">Title</Label>
+                        <TextBox Margin="10 10" Name="txtTitlePersonal" BorderBrush="White"></TextBox>
+                        <Label Margin="10 0" FontSize="16">Description</Label>
+                        <TextBox Margin="10 10" Name="txtDescPersonal" BorderBrush="White"></TextBox>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <RadioButton GroupName="RA" FontSize="14" Name="btnResign" IsChecked="True">Resignation Letter</RadioButton>
+                            <RadioButton GroupName="RA" FontSize="14" Name="btnLeaving" Margin="10 0">Leaving Permit Request</RadioButton>
+                        </StackPanel>
+                        <Button Name="btnPersonal" Click="btnPersonal_Click" Content="Send Request" Margin="5 10 5 5" Width="800"></Button>
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="View Personal Request">
+                    <StackPanel>
+                        <TextBlock Text="Personal Request" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                        <DataGrid Name="viewPers" AutoGenerateColumns="False" IsReadOnly="True" Height="350" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                                <DataGridTextColumn Header="Title" Binding="{Binding Path=Title}"/>
+                                <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}"/>
+                                <DataGridTextColumn Header="Note" Binding="{Binding Path=Note}"/>
+                                <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}"/>
+                                <DataGridTextColumn Header="Type" Binding="{Binding Path=Type}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </TabItem>
+            </dragablz:TabablzControl>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="TPA_Desktop.View.HotelDeptView.AddReservation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPA_Desktop.View.HotelDeptView"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="AddReservation" Height="400" Width="500">
+    <Border Margin="10">
+        <Grid>
+            <StackPanel>
+                <TextBlock Text="Room List" FontSize="20" Padding="10" FontWeight="Bold"/>
+
+                <DataGrid Name="viewRoom" AutoGenerateColumns="False" IsReadOnly="True" Height="225" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                        <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}"/>
+                        <DataGridTextColumn Header="Price" Binding="{Binding Path=Price}"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Path=Status}"/>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="Action"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.HeaderTemplate>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Name="btnSelect" Click="btnSelect_Click" Content="Select" Margin="0 0 0 10"
+                                                    CommandParameter="{Binding Path=Id}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Label FontSize="16" FontWeight="Bold">Nights to stay</Label>
+                <TextBox Name="txtNight" Margin="5"></TextBox>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
